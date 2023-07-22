@@ -1,3 +1,3 @@
 # File-Compressor-Huffman-Encoding
 
-Test 
+Test 2
