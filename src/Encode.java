@@ -5,6 +5,23 @@ import java.util.ArrayList;
 import java.util.Hashtable;
 
 public class Encode {
+
+    /**
+     * Sorts a Node array based on frequency, from least to greatest
+     * @param n the Node ArrayList
+     */
+    public static void sortArray (ArrayList<Node> n) {
+
+        //Traversing the Node array from the start until the final index
+        for (int i = 0; i < n.size(); i++) {
+
+            for (int j = 0; j < n.size() - 1 - i; j++) {
+
+            }
+        }
+
+    }
+
     public static void main(String[] args) {
         //Initial variables
         FileInputStream in;
