@@ -1,6 +1,7 @@
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Hashtable;
 
 public class Encode {
@@ -8,6 +9,7 @@ public class Encode {
         //Initial variables
         FileInputStream in;
         Hashtable<Character, Integer> ht = new Hashtable<Character, Integer>();
+        ArrayList<Node> nodes_array = new ArrayList<Node>();
 
 
         try {
@@ -50,5 +52,11 @@ public class Encode {
         catch (IOException e) {
             System.err.println("I/O ERROR OCCURRED" + e.toString());
         }
+
+        ht.forEach((k,v) -> {
+            nodes_array.add(new Node (k,v));
+        });
+
+        System.out.println("Nodes stored in arraylist");
     }
 }
