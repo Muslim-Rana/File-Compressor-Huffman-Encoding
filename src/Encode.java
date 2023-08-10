@@ -35,6 +35,42 @@ public class Encode {
 
     }
 
+    /**
+     * Takes an ArrayList of Nodes and makes a binary tree out of it based on frequency.
+     * It returns the root node.
+     *
+     * @param nodes_array The sorted (lowest to greatest frequencies) ArrayList of Nodes
+     * @return The root node of the created binary tree.
+     */
+    public static Node buildTree(ArrayList<Node> nodes_array) {
+        if (nodes_array.size() == 0) {
+            return null;
+        }
+        else if (nodes_array.size() == 1) {
+            return nodes_array.get(0);
+        }
+
+        while (nodes_array.size() > 1) {
+            //Creating the initial 2 leaf nodes and combining them under a branch Node
+            Node n0 = nodes_array.remove(0);
+            Node n1 = nodes_array.remove(0);
+            Node nBranch = new Node(n1,n0);
+
+            int i = 0;
+            for (; i < nodes_array.size(); i++) {
+                //Inserting the branch node back into our sorted ArrayList of Nodes
+                if (nodes_array.get(i).freq >= nBranch.freq) {
+                    nodes_array.add(i, nBranch);
+                    break;
+                }
+            }
+            if (i == nodes_array.size()) {
+                nodes_array.add(nBranch);
+            }
+        }
+        return nodes_array.get(0);
+    }
+
     public static void main(String[] args) {
         //Initial variables
         FileInputStream in;
@@ -89,5 +125,10 @@ public class Encode {
         sortArray(nodes_array);
 
         System.out.println("Nodes stored in arraylist and sorted");
+
+        //Building the Huffman tree and producing the root node.
+        Node tree = buildTree(nodes_array);
+
+        System.out.println("Huffman Tree built");
     }
 }
