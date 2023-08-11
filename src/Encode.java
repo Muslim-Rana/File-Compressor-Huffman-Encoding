@@ -1,6 +1,4 @@
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.Hashtable;
 
@@ -110,6 +108,27 @@ public class Encode {
             in.close();
             System.out.println("Finished reading the file");
 
+            ht.forEach((k,v) -> {
+                nodes_array.add(new Node (k,v));
+            });
+            sortArray(nodes_array);
+
+            System.out.println("Nodes stored in arraylist and sorted");
+
+            //Building the Huffman tree and producing the root node.
+            Node tree = buildTree(nodes_array);
+
+            System.out.println("Huffman Tree built");
+
+            //Serializing the tree
+            FileOutputStream fileOut = new FileOutputStream("Tree.ser");
+            ObjectOutputStream out = new ObjectOutputStream(fileOut);
+            out.writeObject(tree);
+            out.close();
+            fileOut.close();
+
+            System.out.println("Tree Serialized");
+
 
         }
         catch (FileNotFoundException e) {
@@ -118,17 +137,5 @@ public class Encode {
         catch (IOException e) {
             System.err.println("I/O ERROR OCCURRED" + e.toString());
         }
-
-        ht.forEach((k,v) -> {
-            nodes_array.add(new Node (k,v));
-        });
-        sortArray(nodes_array);
-
-        System.out.println("Nodes stored in arraylist and sorted");
-
-        //Building the Huffman tree and producing the root node.
-        Node tree = buildTree(nodes_array);
-
-        System.out.println("Huffman Tree built");
     }
 }

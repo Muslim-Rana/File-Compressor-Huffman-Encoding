@@ -1,5 +1,5 @@
 
-public class Node {
+public class Node implements java.io.Serializable {
     public int freq;
     public char value;
     public Node leftNode;
