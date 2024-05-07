@@ -1,13 +1,13 @@
 # File-Compressor-Huffman-Encoding
 
-**Table Of Contents**
+##**Table Of Contents**
 - Overview
 - Core Concepts
 - Languages and Libraries
 - Demo 
 
 
-**Overview**
+##**Overview**
 
 In this project Huffman Encoding will be used to compress 
 large text files. They will also be decoded without
