@@ -9,7 +9,7 @@
 
 ## Overview
 
-In this project Huffman Encoding will be used to compress large text files. Said files will also be decoded without any text corruption or data loss. The goal of this project is to reduce file sizes by a significant amount via the huffman encoding scheme in order to reduce memory usage. The motivation behind this project is to get some more exposure working with greedy algortihms, file parsing, serialization, and compression.
+In this project Huffman Encoding will be used to compress large text files. Said files will also be decoded without any text corruption or data loss. The goal of this project is to reduce file sizes by a significant amount via the huffman encoding scheme in order to reduce memory usage. The motivation behind this project is to get some more exposure working with greedy algorithms, file parsing, serialization, and compression.
 
 ## Core Concepts
 
@@ -22,7 +22,7 @@ In this project Huffman Encoding will be used to compress large text files. Said
 
 ## Languages and Libraries
 - Java
-- Java.util*
+- Java.util.*
 - Java.io.Serializable
 - Java.io.FileInputStream
 - Java.io.FileOutputStream
@@ -30,7 +30,7 @@ In this project Huffman Encoding will be used to compress large text files. Said
 
 ## Demo (warandpeace.txt, 3190 KB .txt file)
 
-- Below are the original .txt file's properties:
+- Below are the original warandpeace.txt file's properties:
 
 <img width="265" alt="image" src="https://github.com/Muslim-Rana/File-Compressor-Huffman-Encoding/assets/125168332/40057ccf-1934-4316-8d8e-a5e04fef5f11">
 
