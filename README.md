@@ -9,7 +9,7 @@
 
 ## Overview
 
-In this project Huffman Encoding will be used to compress large text files. Said files will also be decoded without any text corruption or data loss. The goal of this project is to reduce file sizes by a significant amount via the huffman encoding scheme in order to reduce memory usage. The motivation being this project is to get some more exposure to greedy algortihms, working with file parsing, serialization, and compression.
+In this project Huffman Encoding will be used to compress large text files. Said files will also be decoded without any text corruption or data loss. The goal of this project is to reduce file sizes by a significant amount via the huffman encoding scheme in order to reduce memory usage. The motivation behind this project is to get some more exposure working with greedy algortihms, file parsing, serialization, and compression.
 
 ## Core Concepts
 
